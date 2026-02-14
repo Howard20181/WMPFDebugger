@@ -18,6 +18,14 @@ Hit `x`, the only x-ref function address is the offset.
 
 ![OnLoadStartHook.2](./screenshots/adaptation/onload_start_hook.2.png)
 
+> **Note: Starting from version 18891, this string is dynamically concatenated and cannot be directly searched. Please search `OnLoadStart` (camel-case) and find the x-ref function that references a string contains `applet_index_container.cc`.**
+>
+> ![OnLoadStartHook.Extra.1](./screenshots/adaptation/onload_start_hook.extra.1.png)
+>
+> ![OnLoadStartHook.Extra.2](./screenshots/adaptation/onload_start_hook.extra.2.png)
+>
+> ![OnLoadStartHook.Extra.3](./screenshots/adaptation/onload_start_hook.extra.3.png)
+
 Also, check the struct offset in these two marked functions.
 These offsets are being used in the `onLoadStartHook` function
 in [frida/hook.js](frida/hook.js)
